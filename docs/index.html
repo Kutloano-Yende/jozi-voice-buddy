@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jozi Buddy — a voice AI agent</title>
+  <meta name="description" content="Jozi Buddy is a real-time voice AI agent built with Strands Bidi Agents and Amazon Nova Sonic.">
+  <style>
+    :root {
+      --bg: #140f1f;
+      --panel: #201a2e;
+      --text: #f5f1ff;
+      --muted: #c9bfe0;
+      --amber: #ffb547;
+      --purple: #7b4dff;
+      --focus: #ffd98a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .hero {
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+      background: linear-gradient(135deg, var(--purple) 0%, #3a1f6b 45%, var(--amber) 130%);
+    }
+
+    .hero h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2.25rem, 6vw, 3.5rem);
+      line-height: 1.1;
+    }
+
+    .tagline {
+      max-width: 40rem;
+      margin: 0 auto 2rem;
+      font-size: 1.15rem;
+      color: #f0eaff;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.85rem 1.5rem;
+      border-radius: 999px;
+      background: var(--amber);
+      color: #1a1024;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 3rem;
+    }
+
+    h2 {
+      margin-top: 2.5rem;
+      font-size: 1.6rem;
+    }
+
+    .features {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .features li {
+      background: var(--panel);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+
+    .features h3 {
+      margin: 0 0 0.4rem;
+      color: var(--amber);
+    }
+
+    pre {
+      background: var(--panel);
+      border-radius: 12px;
+      padding: 1rem;
+      overflow-x: auto;
+      color: var(--text);
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 2rem 1rem;
+      border-top: 1px solid #332a48;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Jozi Buddy</h1>
+    <p class="tagline">A real-time voice AI agent powered by Amazon Nova Sonic and Strands Bidi Agents.</p>
+    <a class="button" href="https://github.com/Kutloano-Yende/jozi-voice-buddy">View the code on GitHub</a>
+  </header>
+
+  <main>
+    <ul class="features">
+      <li>
+        <h3>Real-time voice</h3>
+        <p>Talk and listen at the same time. Interrupt Jozi Buddy mid-sentence and it stops to listen.</p>
+      </li>
+      <li>
+        <h3>Powered by Nova Sonic</h3>
+        <p>Speech-to-speech on Amazon Bedrock, with the Nova Sonic model in us-east-1.</p>
+      </li>
+      <li>
+        <h3>Built with Kiro</h3>
+        <p>Built step by step in the Kiro IDE, with Kiro as the pair-programmer.</p>
+      </li>
+    </ul>
+
+    <h2>How to run it locally</h2>
+    <pre><code>git clone https://github.com/Kutloano-Yende/jozi-voice-buddy.git
+cd jozi-voice-buddy
+python3.12 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+aws configure
+python voice_agent.py</code></pre>
+
+    <h2>Tech stack</h2>
+    <ul>
+      <li>Python</li>
+      <li>Strands Agents (Bidi)</li>
+      <li>Amazon Nova Sonic on Amazon Bedrock</li>
+      <li>Kiro IDE</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>Hamba kahle. 👋</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Local AWS credentials — never commit
+.aws/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
